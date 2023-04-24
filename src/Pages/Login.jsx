@@ -2,7 +2,6 @@ import React from "react";
 import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { toast } from "react-hot-toast";
 import ToastContext from "../Context/ToastContext";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../Context/AuthContext";
@@ -36,7 +35,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const emailReg = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+    const emailReg = new RegExp(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
     if (!userData.email.match(emailReg)) {
       return toast.error("Enter a valid email");

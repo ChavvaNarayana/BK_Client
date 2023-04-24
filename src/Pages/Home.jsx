@@ -6,7 +6,6 @@ import { useState } from "react";
 import "../index.css";
 import Navbar from "../Components/Navbar";
 import AuthContext from "../Context/AuthContext";
-import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
